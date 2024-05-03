@@ -12,7 +12,7 @@ import LayoutOwn from "./components/LayoutOwn.jsx";
 import LayoutEmp from "./components/LayoutEmp.jsx";
 import Verify from "./pages/verify.jsx";
 import DashboardPegawai from "./pages/Dashboard/DashboardPegawai.jsx";
-import Struk from "./pages/Dashboard/FormOrder.jsx";
+import FormOrder from "./pages/Dashboard/FormOrder.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
         element: <DashboardPegawai/>,
       },
       {
-        path: "struk",
-        element: <Struk/>,
+        path: "form",
+        element: <FormOrder/>,
       },
     ],
   },
