@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import React from "react";
-// import App from "./App.jsx";
+
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/login.jsx";
@@ -25,19 +25,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <LayoutPeg/>,
+    element: <LayoutPeg />,
     children: [
       {
         index: true,
-        element: <DataPegawai/>,
+        element: <DataPegawai />,
       },
       {
         path: "pegawai",
-        element: <DashboardPegawai/>,
+        element: <DashboardPegawai />,
       },
       {
         path: "form",
-        element: <FormOrder/>,
+        element: <FormOrder />,
       },
     ],
   },
@@ -51,6 +51,40 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path: "/dataPegawai",
+    element: <LayoutPeg />,
+    children: [
+      {
+        index: true,
+        element: <DataPegawai />,
+      },
+    ],
+  },
+
+  {
+    path: "/dashboardPegawai",
+    element: <LayoutPeg />,
+    children: [
+      {
+        index: true,
+        element: <DashboardPegawai />,
+      },
+    ],
+  },
+
+  {
+    path: "/formOrder",
+    element: <LayoutPeg />,
+    children: [
+      {
+        index: true,
+        element: <FormOrder />,
+      },
+    ],
+  },
+
   {
     path: "/employee",
     element: <LayoutEmp />,

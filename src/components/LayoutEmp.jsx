@@ -15,10 +15,23 @@ export default function LayoutEmp() {
       <div className="min-h-screen flex">
         <div className="w-[80px] bg-[#512DA8] min-h-full p-2">
           <ul className="flex flex-col gap-8 py-4 w-full mx-auto justify-center items-center">
+
             <li className="pb-4"><img src="./icons/Shape.svg" className="w-6" alt="Shape" /></li>
-            <li className="w-full items-center flex justify-center opacity-50"><button><img src="./icons/dashboard.svg" className="w-6" alt="Shape" /></button></li>
-            <li className="w-full items-center flex justify-center border-l-2 border-white border-separate"><button><img src="./icons/TO- Do.svg" className="w-6" alt="Shape" /></button></li>
-            <li className="w-full items-center flex justify-center opacity-50"><img src="./icons/Contact.svg" className="w-6" alt="Shape" /></li>
+            <li className="w-full items-center flex justify-center opacity-50">
+              <a href="/dashboard">
+                <img src="./icons/dashboard.svg" className="w-6" alt="Dashboard" />
+              </a>
+            </li>
+            <li className="w-full items-center flex justify-center border-l-2 border-white border-separate">
+              <a href="/todo">
+                <img src="./icons/TO-Do.svg" className="w-6" alt="To-Do" />
+              </a>
+            </li>
+            <li className="w-full items-center flex justify-center opacity-50">
+              <a href="/contact">
+                <img src="./icons/Contact.svg" className="w-6" alt="Contact" />
+              </a>
+            </li>
             <li><img src="./icons/logout.svg" className="w-6" alt="Shape" /></li>
           </ul>
         </div>
@@ -49,8 +62,8 @@ export default function LayoutEmp() {
                 height={32}
               />
               <div className="flex flex-col">
-              Pocoyo
-              <span className="text-xs font-normal">Owner</span>
+                Pocoyo
+                <span className="text-xs font-normal">Owner</span>
               </div>
             </div>
           </div>

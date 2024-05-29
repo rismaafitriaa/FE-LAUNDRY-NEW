@@ -19,13 +19,12 @@ export default function LayoutPeg() {
             <li className="w-full items-center flex justify-center opacity-50"><button><img src="/icons/dashboard.svg" className="w-6" alt="Shape" /></button></li>
             <li className="w-full items-center flex justify-center border-l-2 border-white border-separate"><button><img src="/icons/TO- Do.svg" className="w-6" alt="Shape" /></button></li>
             <li className="w-full items-center flex justify-center opacity-50"><img src="/icons/Contact.svg" className="w-6" alt="Shape" /></li>
-            <li><img src="/icons/logout.svg" className="w-6" alt="Shape" /></li>
+            <li><img  src="/icons/logout.svg" className="w-6" alt="Shape" /></li>
           </ul>
         </div>
         <div className="min-h-full gap-2 w-full overflow-hidden">
           <div className="bg-default flex justify-between px-4 py-2">
             <div className="flex gap-6 items-center justify-start">
-              {/* <img src="/logo.png" alt="Logo" width={50} height={50} /> */}
               <form onSubmit={handleSearch} className="flex flex-row-reverse text-sm">
                 <input
                   type="text"
