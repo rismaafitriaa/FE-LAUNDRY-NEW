@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { login } from "../api/login"
+import { login } from "../api/login";
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -58,28 +58,26 @@ export default function Login() {
                     onChange={handleChange}
                     required
                   />
-                  <a href="#" className="mt-4">
+                  <a href="verify" className="mt-4" aria-current="page">
                     Forgot Password?
                   </a>
                 </div>
+
                 <div>
-                  <button
-                    type="submit"
-                    className="py-3 px-8 rounded-full bg-gradient-to-b from-indigo-500 to-purple-500 text-white mt-4 hover:opacity-80 transition-all w-full"
+                  <a
+                    href="/formOrder"
+                    className="py-3 px-12 rounded-full bg-gradient-to-b from-indigo-500 to-purple-500 text-white mt-4 hover:opacity-80 transition-all w-full"
+                    aria-current="page"
                   >
                     Login
-                  </button>
+                  </a>
                 </div>
               </form>
             </div>
           </div>
           <div className="w-full bg-gradient-to-b from-indigo-500 to-purple-500 shadow rounded-e-xl md:mt-0 sm:max-w-md xl:p-0 justify-center content-center p-12">
             <div className="flex items-center justify-center p-16">
-              <img
-                src="/icon-login.png"
-                alt="Logo"
-                className="object-cover"
-              />
+              <img src="/icon-login.png" alt="Logo" className="object-cover" />
             </div>
           </div>
         </div>

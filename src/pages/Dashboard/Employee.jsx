@@ -1,7 +1,6 @@
 "use client";
+import { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
-
-
 
 export default function Employee() {
   const columns = [
@@ -28,77 +27,27 @@ export default function Employee() {
     
     {
       name: "Action",
-      cell: (row) => <div className="flex gap-4 py-4"> <im  g src="/icons/edit.svg" className="w-5" alt="Shape" /> 
+      cell: () => <div className="flex gap-4 py-4"> <img src="/icons/edit.svg" className="w-5" alt="Shape" /> 
       <img src="/icons/trash.svg" className="w-5" alt="Shape" /></div>,
       sortable: false,
     },
   ];
 
-  const data = [
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Selesai",
-      statusBayar: "Dibayar"
-    },
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Process",
-      statusBayar: "Belum"
-    },
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Process",
-      statusBayar: "Belum"
-    },
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Diambil",
-      statusBayar: "Belum"
-    },
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Process",
-      statusBayar: "Dibayar"
-    },
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Process",
-      statusBayar: "Belum"
-    },
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Process",
-      statusBayar: "Belum"
-    },
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Process",
-      statusBayar: "Belum"
-    },
-    {
-      id: 1,
-      title: "Beetlejuice",
-      year: "1988",
-      status: "Process",
-      statusBayar: "Dibayar"
-    },
-  ];
+const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/data');
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <main className="min-h-full">
